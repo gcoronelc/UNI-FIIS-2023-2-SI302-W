@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="LISTA DE EMPLEADOS" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="122dc0f1-8a88-484b-ba8e-69190a51622b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT IDEMP, NOMBRE, APELLIDO, USUARIO FROM SISTEMAVENTAS.EMPLEADO]]>
+	</queryString>
+	<field name="IDEMP" class="java.lang.Long"/>
+	<field name="NOMBRE" class="java.lang.String"/>
+	<field name="APELLIDO" class="java.lang.String"/>
+	<field name="USUARIO" class="java.lang.String"/>
+	<variable name="CANTIDAD_EMPLEADOS" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{IDEMP}]]></variableExpression>
+		<initialValueExpression><![CDATA[0]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="294" height="37" uuid="141e4477-211f-40e7-a6ec-231d7be735df"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SISTEMA DE VENTAS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="138" y="12" width="317" height="20" forecolor="#0033CC" uuid="878683f5-724f-47a2-81e0-7620dc6e430e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LISTA DE EMPLEADOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="100" height="20" uuid="83e46af3-0776-4383-a198-07296554a21e"/>
+				<text><![CDATA[IDEMP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="1" width="180" height="20" uuid="e3752828-c879-407c-a7fa-8a8c5d3d89a6"/>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="1" width="175" height="20" uuid="e8c074e3-375c-45f8-80a3-480f3d30bd54"/>
+				<text><![CDATA[APELLIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="1" width="100" height="20" uuid="6211fa29-587f-48a0-996d-259cc78e7ad7"/>
+				<text><![CDATA[USUARIO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="21" width="555" height="1" uuid="6a4b94a8-c673-40e9-9078-8b1648df90c3"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="4bc7f9c4-cee0-494f-9ae2-292d117a463d"/>
+				<textFieldExpression><![CDATA[$F{IDEMP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="180" height="20" uuid="90f78c12-8512-445a-aa48-fbf3dd4f9318"/>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="175" height="20" uuid="1a892a2c-4e49-4bba-8da1-cb3493e033dc"/>
+				<textFieldExpression><![CDATA[$F{APELLIDO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="9cfc17db-661c-4c26-bfd9-74df07bd7845"/>
+				<textFieldExpression><![CDATA[$F{USUARIO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="23" width="555" height="1" uuid="e9c11b64-a428-43cf-b272-5d6cc59e64d4"/>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="22" y="10" width="433" height="20" uuid="1b1010a1-0bf0-4780-9f81-a6526494d392"/>
+				<textFieldExpression><![CDATA["Cantidad de empleados: " + $V{CANTIDAD_EMPLEADOS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
