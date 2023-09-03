@@ -15,6 +15,18 @@
 - Canal Youtube: https://www.youtube.com/DesarrollaSoftware
 - Cursos Virtuales: http://gcoronelc.github.io
 
+# DELEGADOS
+
+## Delegado
+
+- Nombre: Adal Guiseppe Aranda Nuñez
+- Correo: adal.aranda.n@uni.pe
+
+## Subdelegado
+
+- Nombre: Erick Gustavo Borja Loyola
+- Correo: erick.borja.l@uni.pe
+
 
 # RECURSOS UTILES
 

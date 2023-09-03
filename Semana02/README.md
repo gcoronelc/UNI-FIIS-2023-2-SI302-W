@@ -3,7 +3,7 @@
 
 ## Clases y objetos
 
-![CLASES Y OBJETOS](https://github.com/gcoronelc/UNI-FIIS-2023-2-SI302-V/blob/main/Semana02/img/clases_y_objetos.png)
+![CLASES Y OBJETOS](https://github.com/gcoronelc/UNI-FIIS-2023-2-SI302-W/blob/main/Semana02/img/clases_y_objetos.png)
 
 
 - Parte 1: https://youtu.be/kmK6lUeIWA8?list=PLIRq7nByT7aRuBgD4UVRjrcUZFM8Fkbut
