@@ -11,6 +11,32 @@ public class ProductoDto {
 	private double precio;
 	private boolean disponible;
 
+	/**
+	 * Constructor por defecto.
+	 */
+	public ProductoDto() {
+		this.codigo = 6000;
+		this.nombre = "Auto Modelo 2023";
+		this.precio = 20000.00;
+		this.disponible = true;
+		System.out.println("Objeto creado.");
+	}
+
+	/**
+	 * Constructor adicional.
+	 * 
+	 * @param codigo Codigo del producto.
+	 * @param nombre Nombre del producto.
+	 * @param precio Precio del producto.
+	 * @param disponible Disponibilidad del producto.
+	 */
+	public ProductoDto(int codigo, String nombre, double precio, boolean disponible) {
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.precio = precio;
+		this.disponible = disponible;
+	}
+	
 	public int getCodigo() {
 		return codigo;
 	}
@@ -43,4 +69,11 @@ public class ProductoDto {
 		this.disponible = disponible;
 	}
 
+	@Override
+	protected void finalize() throws Throwable {
+		System.err.println("Chau objeto.");
+	}
+
+	
+	
 }
