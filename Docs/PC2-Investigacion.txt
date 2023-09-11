@@ -9,6 +9,6 @@ TEMAS DE INVESTIGACIÓN PARA LA PC2
 06.- Expresiones Lambda y Strem
 07.- Principios SOLID
 08.- Java Reflection y ejemplos aplicativos
-09.- Relación entre clases: Herencia, 
+09.- Relación entre clases: Asociacion, Herencia, Polimotfismo, Agregación y Composición.
 10.- Patrón Inyección de Dependencias
 
