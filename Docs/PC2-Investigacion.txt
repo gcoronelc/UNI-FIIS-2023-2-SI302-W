@@ -1,14 +1,14 @@
 
 TEMAS DE INVESTIGACIÓN PARA LA PC2
 -------------------------------------------
-01.- Archivos Log
-02.- Pruebas Unitarias y pruebas de covertura
+01.- Archivos Log - GRUPO 3
+02.- Pruebas Unitarias y pruebas de covertura - GRUPO 4
 03.- Patrones Factory
-04.- Manejo de Datos Genericos (Generic)
+04.- Manejo de Datos Genericos (Generic) - GRUPO 5
 05.- Expresiones regulares
-06.- Expresiones Lambda y Strem
-07.- Principios SOLID
+06.- Expresiones Lambda y Strem - GRUPO 2
+07.- Principios SOLID - GRUPO 1
 08.- Java Reflection y ejemplos aplicativos
-09.- Relación entre clases: Asociacion, Herencia, Polimotfismo, Agregación y Composición.
+09.- Relación entre clases: Asociacion, Herencia, Polimotfismo, Agregación y Composición. - GRUPO 6
 10.- Patrón Inyección de Dependencias
 
