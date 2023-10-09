@@ -3,7 +3,7 @@ package pe.edu.uni.arregloapp01.service;
 import java.util.Arrays;
 import java.util.Random;
 
-public class ArregloService {
+public final class ArregloService {
 
 	private int n;
 	private int[] arreglo;
