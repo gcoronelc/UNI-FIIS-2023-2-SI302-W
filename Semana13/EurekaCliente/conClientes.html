@@ -9,23 +9,102 @@
 
 <body>
     <h1>CONSULTAR CLIENTES</h1>
-    <form>
-        <div>
-            <button type="button" id="btnConsultar">Consultar</button>
-        </div>
-    </form>
+    <div>
+
+        <form>
+            <table>
+                <tr>
+                    <td>Paterno</td>
+                    <td>Paterno</td>
+                    <td>Paterno</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="paterno"></td>
+                    <td><input type="text" id="materno"></td>
+                    <td><input type="text" id="nombre"></td>
+                    <td><button type="button" id="btnConsultar">Consultar</button></td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+    <div>
+        <h2>Resultado</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>CODIGO</th>
+                    <th>PATERNO</th>
+                    <th>MATERNO</th>
+                    <th>NOMBRE</th>
+                    <th>DNI</th>
+                </tr>
+            </thead>
+            <tbody id="resultado"></tbody>
+        </table>
+    </div>
+
 
     <script src="jquery-3.7.1.min.js"></script>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
 
             $("#btnConsultar").click(fnBtnConsultar);
 
         })
 
-        function fnBtnConsultar(){
-            alert("Hola");
+        function fnBtnConsultar2() {
+            var settings = {
+                "url": "http://localhost:8080/clientes",
+                "method": "GET",
+                "timeout": 0,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "data": JSON.stringify({
+                    "paterno": "O",
+                    "materno": "A",
+                    "nombre": "LI"
+                }),
+            };
+
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+
+        function fnBtnConsultar() {
+            // Datos
+            let paterno = $("#paterno").val();
+            let materno = $("#materno").val();
+            let nombre = $("#nombre").val();
+            //let datos = { "paterno": paterno, "materno": materno, "nombre": nombre };
+            //console.log(JSON.stringify(datos));
+            // Proceso
+            let datos = "paterno=" + paterno + "&materno=" + materno + "&nombre=" + nombre;
+            $.ajax({
+                url: "http://localhost:8080/clientes",
+                type: "GET",
+                data: datos,
+                contentType: "application/json; charset=utf-8",
+                //dataType: 'json',
+                success: function (datos) {
+                    let html = "";
+                    let i = 0;
+                    for (i = 0; i < datos.length; i++) {
+                        let r = datos[i];
+                        html += "<tr>";
+                        html += "<td>" + r.codigo + "</td>";
+                        html += "<td>" + r.paterno + "</td>";
+                        html += "<td>" + r.materno + "</td>";
+                        html += "<td>" + r.dni + "</td>";
+                        html += "</tr>";
+                    }
+                    $("#resultado").html(html);
+                }
+            });
         }
     </script>
 
