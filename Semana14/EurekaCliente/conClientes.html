@@ -80,9 +80,10 @@
             let paterno = $("#paterno").val();
             let materno = $("#materno").val();
             let nombre = $("#nombre").val();
-            let datos = "paterno=" + paterno + "&materno=" + materno + "&nombre=" + nombre;
+            //let datos = { "paterno": paterno, "materno": materno, "nombre": nombre };
+            //console.log(JSON.stringify(datos));
             // Proceso
-
+            let datos = "paterno=" + paterno + "&materno=" + materno + "&nombre=" + nombre;
             $.ajax({
                 url: "http://localhost:8080/clientes",
                 type: "GET",
